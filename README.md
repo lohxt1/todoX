@@ -62,6 +62,6 @@
 
 **Passwordless authentication** using custom magic-links.
 
-**Optimistic UI** achieved by the **[SWR](https://github.com/vercel/swr)** _react hook_ for _data fetching_
+**Optimistic UI** achieved by the **[SWR](https://github.com/vercel/swr)** v2.0 library
 
 **[Planetscale](https://www.planetscale.com/)** is used as the database for storing user data and todos. You can refer to the _Prisma schema_ **[here](/prisma/schema.prisma)**.
