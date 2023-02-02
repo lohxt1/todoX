@@ -11,7 +11,7 @@ const TodoItem: React.FC<{ todo: Todo }> = ({ todo }) => {
   });
 
   const _handleDelete = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     let updatedTodos = todos.filter((t) => t.id !== todo.id);
 
     try {
@@ -35,7 +35,7 @@ const TodoItem: React.FC<{ todo: Todo }> = ({ todo }) => {
   };
 
   const _handleChange = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     let updatedTodos = todos.map((t) =>
       t.id === todo.id ? { ...todo, completed: !t.completed } : t,
     );

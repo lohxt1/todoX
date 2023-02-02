@@ -1,4 +1,7 @@
+![made-with-typescript](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
+
 <div align="center" >
+  <img align="center" src="https://lohxt1.github.io/_assets/todox.png" alt="TodoX"/>
   <h1 
     align="center"
     style="text-decoration:underline;text-decoration-style:dashed"
@@ -10,7 +13,6 @@
     <img alt="Twitter" src="https://img.shields.io/twitter/url.svg?label=%40lohxt&style=social&url=https%3A%2F%2Ftwitter.com%2Flohxt" />
   </a>
   <br />
-  <br />
 </div>
 
 <p align="center" style="font-weight:400;font-size:20px;">
@@ -19,49 +21,53 @@
   </a> starter template
 </p>
 
-## Tech Stack
+#### Tech Stack
 
-- **[Next.js](https://nextjs.org/) – framework**
-- **[Typescript](https://www.typescriptlang.org/) – language**
-- **[Tailwind](https://tailwindcss.com/) – CSS**
-- **[Prisma](https://prisma.io/) – ORM**
-- **[Planetscale](https://railway.app/) – MYSQL database**
-- **[NextAuth.js](https://next-auth.js.org/) – auth**
-- **[Vercel](https://vercel.com/) – hosting**
+- [Next.js](https://nextjs.org/) – `framework`
+- [Typescript](https://www.typescriptlang.org/) – `language`
+- [Tailwind](https://tailwindcss.com/) – `CSS`
+- [Prisma](https://prisma.io/) – `ORM`
+- [Postgresql](https://railway.app/) – `database`
+- [NextAuth.js](https://next-auth.js.org/) – `auth`
+- [Vercel](https://vercel.com/) – `hosting`
 
-## Additional plugins/libraries
+#### Running the code `locally`
 
-**prettier-plugin-sort-imports** - To sort all the imports in a particular order
-**prettier-plugin-tailwindcss** - To sort the tailwind classnames
-**clsx** & **tailwind-merge** - To organize and improve the readabilty of the tailwind classes
+To run the code locally, open _Terminal_ in your `projects` folder and take the steps:
 
-## Running locally
+```bash
+# STEP 1: Get sources from GitHub
+$ git clone https://github.com/lohxt1/todoX.git
+$ cd todoX
 
-> .env
+# STEP 2: Install the requirements
+$ npm install
 
-- Using the `.env.example` file as reference, create a `.env` file with valid values.
+# STEP 3: Setting up Prisma
 
-> Install Modules
+# Modify the schema if required and validate it by running
+$ npx prisma validate
 
-- Run `npm install`
-  (node v16.7.0 was used at the time of creation)
+# Generate Prisma client
+$ npx prisma generate
 
-> Prisma
+# Push the schema changes
+# make sure you have the right DATABASE_URL in .env file
+$ npx prisma db push
 
-- Modify the schema if required and validate it by running `npx prisma validate`
-- Run `npx prisma db push`
-  (make sure you have the right DATABASE_URL in env file)
+# STEP 4: Running the app in dev mode
+$ npm run dev
+```
 
-> Running the app
+#### Additional plugins/libraries
 
-- `npm run dev`
+- `prettier-plugin-sort-imports` - To sort all the imports in a particular order
+- `prettier-plugin-tailwindcss` - To sort the tailwind classnames
+- `clsx` & `tailwind-merge` - To organize and improve the readabilty of the tailwind classes
 
-## Implementation
+#### Implementation
 
-**TodoX** is built as a standard Next.js application with a customizable **[Middleware](https://nextjs.org/docs/advanced-features/middleware)**
-
-**Passwordless authentication** using custom magic-links.
-
-**Optimistic UI** achieved by the **[SWR](https://github.com/vercel/swr)** v2.0 library
-
-**[Planetscale](https://www.planetscale.com/)** is used as the database for storing user data and todos. You can refer to the _Prisma schema_ **[here](/prisma/schema.prisma)**.
+- `TodoX` is built as a standard Next.js application with a customizable middleware.
+- `Passwordless authentication` using custom email-links.
+- `Optimistic UI` achieved by the [SWR](https://github.com/vercel/swr) v2.0 library
+- [Planetscale](https://www.planetscale.com/) is used as the database for storing user data and todos. You can refer to the _Prisma schema_ [here](/prisma/schema.prisma).

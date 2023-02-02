@@ -26,6 +26,7 @@ const TodoItemRoot = ({
           "text-base",
           "hover:cursor-pointer hover:bg-[#fff7]",
           "focus:outline-none",
+          isCompleted && "line-through",
         )}
       >
         {text}
